@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "当前地点": {
+      "default": "未知区域",
+      "type": "string"
+    },
+    "当前时间": {
+      "default": "2099年1月1日 星期四 17:00",
+      "type": "string"
+    },
+    "晶币余额": {
+      "default": 0,
+      "type": "number"
+    },
+    "资产与潜能": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "名称": {
+            "default": "未知资产",
+            "type": "string"
+          },
+          "类型": {
+            "default": "不动产",
+            "type": "string",
+            "enum": [
+              "租约",
+              "不动产",
+              "重型设备",
+              "技艺",
+              "凭证"
+            ]
+          },
+          "详情": {
+            "default": "",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "角色好感度": {
+      "default": {},
+      "type": "object",
+      "propertyNames": {
+        "type": "string",
+        "description": "角色名称"
+      },
+      "additionalProperties": {
+        "type": "number"
+      }
+    },
+    "镜头人物": {
+      "default": {},
+      "type": "object",
+      "propertyNames": {
+        "type": "string",
+        "description": "角色名称"
+      },
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "源质余额": {
+            "default": 0,
+            "type": "number"
+          },
+          "情绪波动": {
+            "default": 0,
+            "type": "number"
+          },
+          "基础战力": {
+            "default": 0,
+            "type": "number"
+          }
+        }
+      }
+    },
+    "外勤任务": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "任务目标": {
+          "default": "",
+          "type": "string"
+        },
+        "髓晶耗尽时间": {
+          "default": "未激活/未知",
+          "type": "string"
+        },
+        "周边威胁": {
+          "default": "无明显异常",
+          "type": "string"
+        },
+        "携带物资": {
+          "default": {},
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "description": "物品名称"
+          },
+          "additionalProperties": {
+            "type": "string",
+            "description": "数量与功效"
+          }
+        }
+      }
+    }
+  }
+}
