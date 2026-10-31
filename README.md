@@ -72,6 +72,9 @@ import 'https://testingcf.jsdelivr.net/gh/StageDog/tavern_resource/dist/酒馆�
 
 本仓库在 `.github/workflows` 文件夹中设置了几个 CI 工作流来为你带来自动打包、自动更新功能, 你也可以在网页上方的 `Actions` 中手动运行它们:
 
+> [!NOTE]
+> 当前仓库已禁用这些工作流: 工作流文件均以 `.disabled` 为后缀 (如 `bundle.yaml.disabled`), GitHub 不会识别和运行它们. 如需重新启用, 去掉对应的 `.disabled` 后缀即可.
+
 **`bundle.yaml`**
 
 - 自动打包 `src` 文件夹中的代码到 `dist` 文件夹中, 并自动递增版本号从而让 jsdelivr 更快更新缓存;
